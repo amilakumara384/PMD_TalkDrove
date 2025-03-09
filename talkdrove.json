@@ -1,0 +1,30 @@
+{
+    "bot-name": "PRABATH-MD",
+    "description": "PRABATH-MD 👨‍💻 🇱🇰 - A Javascript WhatsApp User Bot",
+    "logo": "https://telegra.ph/file/1743544c222ffd613c219.jpg",
+    "keywords": ["bot", "whatsapp", "automation", "prabathmd", "byimaxz"],
+    "documentation-link": "https://prabath-md-deploy.vercel.app/",
+    "owner-verification":"danajxima@gmail.com",
+  
+    "env": {
+      "SESSION_ID": {
+        "description": "Put your SESSION_ID here. Make sure it starts with PRABATH-MD;;;, or get session id from VIEW DOCUMENTATION BUTTON",
+        "value":"",
+        "required": true
+        
+      },
+      "GITHUB_AUTH_TOKEN": {
+        "description": "Put Your Github Auth Token, (Go to github settings;;;devoloper options and generate token classic)",
+        "value":"",
+        "required": true
+        
+      },
+      "BOT_NUMBER": {
+        "description": "BOT_NUMBER with country code (e.g, 9230723xxxxx)",
+        "value":"",
+        "required": true
+        
+      }
+    }
+  
+  }
