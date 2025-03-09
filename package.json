@@ -4,9 +4,9 @@
     "description": "P-MD is a Powerful Whatsapp bot.  👨‍💻❤️",
     "main": "start.js",
     "scripts": {
-        "start": "pm2 start start.js --deep-monitoring --attach --name mdnewbot",
-        "stop": "pm2 stop mdnewbot",
-        "restart": "pm2 restart mdnewbot"
+        "start": "pm2 start start.js --deep-monitoring --attach --name mdnewbottalkdrove",
+        "stop": "pm2 stop mdnewbottalkdrove",
+        "restart": "pm2 restart mdnewbottalkdrove"
     },
     "dependencies": {
         "@adiwajshing/keyed-db": "^0.2.4",
@@ -26,7 +26,7 @@
         "@sl-code-lords/wabetainfo": "1.2.0",
         "@tobyg74/tiktok-api-dl": "1.0.13",
         "@vitalets/google-translate-api": "9.2.0",
-        "@whiskeysockets/baileys": "6.7.13",
+        "@whiskeysockets/baileys": "6.7.16",
         "api-dylux": "latest",
         "aptoide-scraper": "1.0.1",
         "awesome-phonenumber": "6.2.0",
@@ -93,6 +93,7 @@
         "wa_set_pkg": "1.0.1",
         "wa-sticker-formatter": "^4.3.2",
         "xvideos-scraper": "1.0.4",
-        "youtubedl-core": "4.11.7"
+        "youtubedl-core": "4.11.7",
+        "node-cache": "5.1.2"
     }
 }
