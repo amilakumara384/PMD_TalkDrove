@@ -17,7 +17,6 @@
         "@bochilteam/scraper-sosmed": "1.0.5",
         "@ffmpeg-installer/ffmpeg": "^1.1.0",
         "@google/generative-ai": "0.17.1",
-        "@sasmeee/wabetainfo": "1.1.1",
         "@sl-code-lords/esana-news": "1.0.3",
         "@sl-code-lords/image-library": "1.0.0",
         "@sl-code-lords/movie-dl": "1.1.0",
