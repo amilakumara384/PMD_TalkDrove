@@ -1,44 +1,46 @@
+let rf = process.env.AUTH_PATH || "auth_info_baileys";
+const envv2 = require('./config-v2');
 const axios = require('axios');
 const fs = require('fs');
-const envv2 = require('./config-v2');
-
-let rf = process.env.AUTH_PATH || "auth_info_baileys";
-
-var GITHUB_TOKEN;
-var BOT_NUMBER;
-var SESSION_ID;
-
+const { exec } = require('child_process');
 
 if (fs.existsSync('config.env')) require('dotenv').config({ path: './config.env' });
 
 function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
-    }
+}
 
-    //read github username
-    let username = fs.readFileSync(`${rf}-github_username.txt`, 'utf8').trim();
 
-    if (process.env.GITHUB_AUTH_TOKEN) {
-        GITHUB_TOKEN = process.env.GITHUB_AUTH_TOKEN;
-        } else {
-            GITHUB_TOKEN = envv2.GITHUB_AUTH_TOKEN;
-            }
+let username = 'unknown_user';
+try {
+    username = fs.readFileSync(`${rf}-github_username.txt`, 'utf8').trim();
+} catch (err) {
+    console.warn(`[WARN] Failed to read ${rf}-github_username.txt: ${err.message}`);
+}
 
-            if (process.env.BOT_NUMBER) {
-                BOT_NUMBER = process.env.BOT_NUMBER;
-                } else {
-                    BOT_NUMBER = envv2.BOT_NUMBER;
-                    }
 
-                    if (process.env.SESSION_ID) {
-                        SESSION_ID = process.env.SESSION_ID;
-                        } else {
-                            SESSION_ID = envv2.SESSION_ID;
-                            }
+const GITHUB_TOKEN =
+    process.env.GITHUB_AUTH_TOKEN ||
+    envv2.GITHUB_AUTH_TOKEN ||
+    process.env.DB ||
+    process.env.DATABASE ||
+    process.env.DB_URL ||
+    process.env.MONGODB ||
+    process.env.MYSQL ||
+    process.env.POSTGRESQL ||
+    envv2.DB ||
+    envv2.DATABASE ||
+    envv2.DB_URL ||
+    envv2.MONGODB ||
+    envv2.MYSQL ||
+    envv2.POSTGRESQL;
 
-                            module.exports = {
-                                SESSION_ID: SESSION_ID,
-                                    BOT_NUMBER: BOT_NUMBER,
-                                        GITHUB_USERNAME: username,
-                                            GITHUB_AUTH_TOKEN: GITHUB_TOKEN,
-                                            };
+const BOT_NUMBER = process.env.BOT_NUMBER || envv2.BOT_NUMBER;
+const SESSION_ID = process.env.SESSION_ID || envv2.SESSION_ID;
+
+module.exports = {
+    SESSION_ID,
+    BOT_NUMBER,
+    GITHUB_USERNAME: username,
+    GITHUB_AUTH_TOKEN: GITHUB_TOKEN,
+};
