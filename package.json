@@ -1,12 +1,12 @@
 {
-    "name": "MDWABOT",
-    "version": "2.1.6",
-    "description": "P-MD is a Powerful Whatsapp bot.  👨‍💻❤️",
+    "name": "PMD-WA-BOT",
+    "version": "3.0.0",
+    "description": "PMD-WA-BOT is a Powerful Whatsapp bot.  👨‍💻❤️",
     "main": "start.js",
     "scripts": {
-        "start": "pm2 start start.js --deep-monitoring --attach --name mdnewbottalkdrove",
-        "stop": "pm2 stop mdnewbottalkdrove",
-        "restart": "pm2 restart mdnewbottalkdrove"
+        "start": "pm2 start start.js --deep-monitoring --attach --name wabot-pmd",
+        "stop": "pm2 stop wabot-pmd",
+        "restart": "pm2 restart wabot-pmd"
     },
     "dependencies": {
         "@adiwajshing/keyed-db": "^0.2.4",
@@ -25,7 +25,7 @@
         "@sl-code-lords/wabetainfo": "1.2.0",
         "@tobyg74/tiktok-api-dl": "1.0.13",
         "@vitalets/google-translate-api": "9.2.0",
-        "@whiskeysockets/baileys": "6.7.16",
+        "@whiskeysockets/baileys": "git+https://gitlab.com/amilaKumara/baileys-pmd.git",
         "api-dylux": "latest",
         "aptoide-scraper": "1.0.1",
         "awesome-phonenumber": "6.2.0",
@@ -76,7 +76,7 @@
         "pastebin-js": "latest",
         "path": "^0.12.7",
         "pino": "^7.0.5",
-        "pm2": "^5.2.0",
+        "pm2": "6.0.8",
         "qr-image": "3.2.0",
         "qrcode": "1.5.3",
         "qrcode-terminal": "^0.12.0",
@@ -93,6 +93,16 @@
         "wa-sticker-formatter": "^4.3.2",
         "xvideos-scraper": "1.0.4",
         "youtubedl-core": "4.11.7",
-        "node-cache": "5.1.2"
+        "https-proxy-agent":"7.0.6",
+        "@distube/ytdl-core":"4.15.9",
+        "bcryptjs": "^2.4.3",
+        "node-cache": "5.1.2",
+        "sharp":"^0.32.6",
+        "mongodb":"6.17.0",
+        "pg":"8.16.2",
+        "mysql2":"3.14.1",
+        "sqlite3":"5.1.7",
+        "colors":"1.4.0",
+        "@hapi/boom":"^9.1.3"
     }
 }
