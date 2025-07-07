@@ -1,7 +1,7 @@
 {
-  "name": "PRABATH-MD (2.1.6)",
+  "name": "PRABATH-MD (3.0.0)",
   "description": "PRABATH-MD has been designed to make things easier and fun while using WhatsApp. 👨‍💻❤️",
-  "logo": "https://telegra.ph/file/ad25b2227fa2a1a01b707.jpg",
+  "logo": "https://i.ibb.co/YnKwtFV/50d27b64cf679379.jpg",
   "keywords": ["nodejs", "bot", "whatsapp bot", "multi device", "prabath-md"],
   "success_url": "/",
 
@@ -17,8 +17,8 @@
     },  
 
 
-    "GITHUB_AUTH_TOKEN": {
-      "description": "Put your github authtoken here.",
+    "DATABASE": {
+      "description": "put any one database URL — Github token, MongoDB, MySQL, or PostgreSQL.",
       "required": true
     }   
 },
